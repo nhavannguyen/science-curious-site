@@ -5,30 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clinical Biochemistry & Enzymology Deep Dive | Alex Lab</title>
   <link rel="icon" href="logo.jpg" type="image/jpeg">
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  
+  <!-- FIX TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+  
   <style>
-    body { font-family: 'DM Sans', sans-serif; }
+    body { font-family: 'DM Sans', sans-serif; background-color: #0a0e1a; color: #cbd5e1; }
     .font-display { font-family: 'Fraunces', serif; }
+    
+    /* Đã bổ sung Style cho Neon & Card */
+    .neon-text { color: #00ffd5; text-shadow: 0 0 10px rgba(0, 255, 213, 0.4); }
     .neon-glow { text-shadow: 0 0 10px #00ffd5, 0 0 40px #00ffd555; }
+    .border-card { border: 1px solid rgba(255, 255, 255, 0.08); background-color: #111827; }
     .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
     .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px #00ffd522; }
-    .page-section { display: none; }
-    .page-section.active { display: block; }
   </style>
 </head>
-<body class="w-full min-h-screen text-white" style="background: rgb(10, 14, 26);">
+<body class="w-full min-h-screen text-white">
 
-  <!-- HEADER / NAV (Thêm lại Menu) -->
+  <!-- HEADER / NAV -->
   <header class="fixed top-0 left-0 w-full z-50 bg-[#0a0e1a]/90 backdrop-blur-sm border-b border-white/5">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="font-display text-xl font-bold neon-text tracking-tighter">ALEXLAB</a>
       <div class="flex items-center gap-6 text-sm text-gray-300">
-        <a href="index.html#page-home" class="hover:text-white">Home</a>
-        <a href="index.html#page-introduction" class="hover:text-white">About Me</a>
-        <a href="#" class="neon-text">Academic Focus</a>
-        <a href="index.html#page-sci-pop" class="hover:text-white">Sci-Pop</a>
+        <a href="index.html#page-home" class="hover:text-white transition-colors">Home</a>
+        <a href="index.html#page-introduction" class="hover:text-white transition-colors">About Me</a>
+        <a href="#" class="neon-text font-semibold">Academic Focus</a>
+        <a href="index.html#page-sci-pop" class="hover:text-white transition-colors">Sci-Pop</a>
       </div>
     </nav>
   </header>
@@ -39,20 +44,20 @@
     <!-- Hero / Title -->
     <div class="mb-16 border-b border-white/5 pb-12">
       <div class="flex items-center gap-2 mb-2">
-        <span class="text-xs uppercase tracking-widest neon-text">DEEP DIVE</span>
+        <span class="text-xs uppercase tracking-widest neon-text font-bold">DEEP DIVE</span>
       </div>
-      <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tighter">Clinical Biochemistry & Enzymology</h1>
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tighter text-white font-display">Clinical Biochemistry & Enzymology</h1>
       <p class="mt-6 text-lg md:text-xl text-gray-400 max-w-3xl leading-relaxed">
         Investigating enzyme kinetics, metabolic pathways, and structural biochemistry to optimize clinical diagnostic pathways at Denison University. My goal is to apply quantitative and computational tools to understand molecular mechanisms of disease.
       </p>
     </div>
 
-    <!-- Layout 2 Cột Chuyên nghiệp -->
-    <div class="grid md:grid-grid-cols-12 gap-10">
+    <!-- Layout 2 Cột chuẩn (Đã fix md:grid-cols-12) -->
+    <div class="grid md:grid-cols-12 gap-10">
       
-      <!-- CỘT TRÁI: Core Areas -->
+      <!-- CỘT TRÁI: Core Areas (Chiếm 8 cột) -->
       <div class="md:col-span-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-white">
           🔬 Core Research Topics
         </h2>
         
@@ -61,7 +66,7 @@
           <div class="border-card p-6 rounded-2xl">
             <h3 class="text-lg font-semibold neon-text">Enzyme kinetics & inhibition mechanisms</h3>
             <p class="text-sm mt-3 text-gray-400 leading-relaxed">
-              Analyzing rate equations, binding affinities ($K_m, V_{max}$), and types of inhibition (competitive, non-competitive, allosteric). Utilizing computational modeling and spectroscopy to decipher complex allosteric interactions and understand how mutations disrupt normal protein function in genetic diseases.
+              Analyzing rate equations, binding affinities (K<sub>m</sub>, V<sub>max</sub>), and types of inhibition (competitive, non-competitive, allosteric). Utilizing computational modeling and spectroscopy to decipher complex allosteric interactions and understand how mutations disrupt normal protein function in genetic diseases.
             </p>
           </div>
           
@@ -83,13 +88,13 @@
         </div>
       </div>
 
-      <!-- CỘT PHẢI: Techniques & Outlook -->
+      <!-- CỘT PHẢI: Techniques & Outlook (Chiếm 4 cột) -->
       <div class="md:col-span-4">
-        <div class="space-y-10 sticky top-28">
+        <div class="space-y-8 sticky top-28">
           
           <!-- Techniques Section -->
-          <div class="border-card p-6 rounded-2xl bg-[#0a0e1a]/50">
-            <h3 class="text-xl font-bold mb-5 flex items-center gap-2">🛠️ Key Techniques</h3>
+          <div class="border-card p-6 rounded-2xl">
+            <h3 class="text-xl font-bold mb-5 flex items-center gap-2 text-white">🛠️ Key Techniques</h3>
             <ul class="space-y-3 text-sm text-gray-400 list-disc list-inside">
               <li>UV-Vis Spectroscopy</li>
               <li>Enzyme Assays (Michaelis-Menten)</li>
@@ -101,10 +106,10 @@
           
           <!-- Future Section -->
           <div class="border border-emerald-400/20 p-6 rounded-2xl bg-emerald-950/20">
-            <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-emerald-300">
+            <h3 class="text-xl font-bold mb-3 flex items-center gap-2 text-emerald-300">
               Future Direction
             </h3>
-            <p class="text-sm text-emerald-200 opacity-90 leading-relaxed">
+            <p class="text-sm text-emerald-200/90 leading-relaxed">
               Interested in leveraging High-Throughput Screening (HTS) to identify novel small molecule inhibitors for therapeutically relevant enzymes. Exploring the direct-to-PhD pathway in clinical biochemistry.
             </p>
           </div>
@@ -116,7 +121,7 @@
 
     <!-- Nút Back to Home -->
     <div class="mt-16 text-center">
-      <a href="index.html" class="inline-flex items-center gap-2 text-sm neon-text hover:underline">
+      <a href="index.html" class="inline-flex items-center gap-2 text-sm neon-text hover:underline font-semibold">
         ← Back to Home
       </a>
     </div>
