@@ -3,27 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clinical Biochemistry & Enzymology | Alex Lab</title>
+  <title>Clinical Biochemistry & Enzymology Deep Dive | Alex Lab</title>
+  
+  <!-- Chèn liên kết tới Font và Tailwind CSS (nếu bạn đang dùng) ở đây -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #0a0e1a; color: #cbd5e1; }
+    h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; color: #ffffff; }
+    .neon-text { color: #00ffd5; text-shadow: 0 0 10px rgba(0,255,213,0.5); }
+    .border-card { border: 1px solid rgba(255,255,255,0.08); background-color: #111827; }
+  </style>
 </head>
-<body class="bg-[#0a0e1a] text-white min-h-screen p-8">
-  <div class="max-w-4xl mx-auto pt-12">
-    <a href="index.html" class="text-[#00ffd5] hover:underline mb-8 inline-block">← Back to Home</a>
-    
-    <span class="text-xs uppercase tracking-widest text-[#00ffd5] font-bold block mb-2">Academic Focus</span>
-    <h1 class="text-4xl font-bold mb-6">Clinical Biochemistry & Enzymology</h1>
-    
-    <div class="space-y-4 text-gray-300">
-      <p class="text-lg">Investigating enzyme kinetics, metabolic pathways, and structural biochemistry at Denison University.</p>
-      <div class="p-6 rounded-2xl bg-[#141929] border border-white/10 mt-6">
-        <h3 class="text-xl font-bold text-white mb-3">🔬 Research Topics</h3>
-        <ul class="list-disc list-inside space-y-2 text-gray-400">
-          <li>Enzyme kinetics & inhibition mechanisms</li>
-          <li>Metabolic pathway integration</li>
-          <li>Computational structural biology</li>
-        </ul>
+<body>
+
+  <!-- HEADER / NAV (Thêm lại Menu) -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#0a0e1a]/90 backdrop-blur-sm border-b border-white/5">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-display text-xl font-bold neon-text tracking-tighter">ALEXLAB</a>
+      <div class="flex items-center gap-6 text-sm text-gray-300">
+        <a href="index.html#page-home" class="hover:text-white">Home</a>
+        <a href="index.html#page-introduction" class="hover:text-white">About Me</a>
+        <a href="#" class="neon-text">Academic Focus</a>
+        <a href="index.html#page-sci-pop" class="hover:text-white">Sci-Pop</a>
       </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="relative pt-28 pb-20 max-w-7xl mx-auto px-6">
+    
+    <!-- Hero / Title -->
+    <div class="mb-16 border-b border-white/5 pb-12">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-xs uppercase tracking-widest neon-text">DEEP DIVE</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tighter">Clinical Biochemistry & Enzymology</h1>
+      <p class="mt-6 text-lg md:text-xl text-gray-400 max-w-3xl leading-relaxed">
+        Investigating enzyme kinetics, metabolic pathways, and structural biochemistry to optimize clinical diagnostic pathways at Denison University. My goal is to apply quantitative and computational tools to understand molecular mechanisms of disease.
+      </p>
     </div>
-  </div>
+
+    <!-- Layout 2 Cột Chuyên nghiệp -->
+    <div class="grid md:grid-grid-cols-12 gap-10">
+      
+      <!-- CỘT TRÁI: Core Areas -->
+      <div class="md:col-span-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+          🔬 Core Research Topics
+        </h2>
+        
+        <div class="space-y-6">
+          <!-- Area 1 -->
+          <div class="border-card p-6 rounded-2xl">
+            <h3 class="text-lg font-semibold neon-text">Enzyme kinetics & inhibition mechanisms</h3>
+            <p class="text-sm mt-3 text-gray-400 leading-relaxed">
+              Analyzing rate equations, binding affinities ($K_m, V_{max}$), and types of inhibition (competitive, non-competitive, allosteric). Utilizing computational modeling and spectroscopy to decipher complex allosteric interactions and understand how mutations disrupt normal protein function in genetic diseases.
+            </p>
+          </div>
+          
+          <!-- Area 2 -->
+          <div class="border-card p-6 rounded-2xl">
+            <h3 class="text-lg font-semibold neon-text">Metabolic pathway integration</h3>
+            <p class="text-sm mt-3 text-gray-400 leading-relaxed">
+              Studying how major metabolic pathways (glycolysis, TCA cycle, fatty acid oxidation) are regulated and connected. Understanding the biochemical basis of metabolic disorders like diabetes, where dysregulation leads to severe clinical consequences.
+            </p>
+          </div>
+          
+          <!-- Area 3 -->
+          <div class="border-card p-6 rounded-2xl">
+            <h3 class="text-lg font-semibold neon-text">Computational structural biology</h3>
+            <p class="text-sm mt-3 text-gray-400 leading-relaxed">
+              Applying tools like PyMOL and molecular dynamics simulations to visualize protein-ligand binding and analyze conformational changes. Using bioinformatics to predict the impact of clinical variants on protein structure and stability, bridging the gap between genomic data and structural function.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CỘT PHẢI: Techniques & Outlook -->
+      <div class="md:col-span-4">
+        <div class="space-y-10 sticky top-28">
+          
+          <!-- Techniques Section -->
+          <div class="border-card p-6 rounded-2xl bg-[#0a0e1a]/50">
+            <h3 class="text-xl font-bold mb-5 flex items-center gap-2">🛠️ Key Techniques</h3>
+            <ul class="space-y-3 text-sm text-gray-400 list-disc list-inside">
+              <li>UV-Vis Spectroscopy</li>
+              <li>Enzyme Assays (Michaelis-Menten)</li>
+              <li>Molecular Dynamics Simulations</li>
+              <li>Bioinformatics (Sequence/Structure)</li>
+              <li>Protein Purification</li>
+            </ul>
+          </div>
+          
+          <!-- Future Section -->
+          <div class="border border-emerald-400/20 p-6 rounded-2xl bg-emerald-950/20">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-emerald-300">
+              Future Direction
+            </h3>
+            <p class="text-sm text-emerald-200 opacity-90 leading-relaxed">
+              Interested in leveraging High-Throughput Screening (HTS) to identify novel small molecule inhibitors for therapeutically relevant enzymes. Exploring the direct-to-PhD pathway in clinical biochemistry.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Nút Back to Home -->
+    <div class="mt-16 text-center">
+      <a href="index.html" class="inline-flex items-center gap-2 text-sm neon-text hover:underline">
+        ← Back to Home
+      </a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-10 text-center text-xs text-gray-600">
+    Denison University Class of 2030 | Alex Lab Portfolio
+  </footer>
+
 </body>
 </html>
